@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIEDRA PAPEL TIJERA</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="jugadas.js" defer type="text/javascript"></script>
+    <script src="app.js" defer type="text/javascript"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>PIEDRA PAPEL TIJERA</h1>
+    </header>
+    <main>
+        <h3 class="score">0 : 0</h3>
+        <section class="eleccion">
+            <ul>
+                <li><p>4 rondas</p></li>
+                <li><p>Selecciona una jugada</p></li>
+            </ul>
+            <div class="imagenes">
+                <img class="tijeras seleccionado" src="img/opciones/humano_tijeras.png" alt="">
+                <img class="papel" src="img/opciones/humano_papel.png" alt="">
+                <img class="piedra" src="img/opciones/humano_piedra.png" alt="">
+            </div>
+        </section>
+        <div class="jugabilidad">
+            <div>
+                <button class="jugar enabled">JUGAR</button>
+                <button class="nuevo enabled">REINICIAR</button>
+            </div>
+        </div>
+        <section class="versus">  
+            <div class="accion">
+                <img class="humano"  src="img/opciones/humano_tijeras.png" alt="">
+                <h4>VS</h4>
+                <img class="comp"  src="img/opciones/comp_piedra.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

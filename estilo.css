@@ -1,0 +1,298 @@
+body{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    background-color: rgb(56, 56, 42);
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.5rem;
+    box-sizing: border-box;
+}
+
+*{
+    -webkit-transition: 0.3s;
+}
+header{
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    grid-column: 1/-1;
+    background-color: #686d40;
+    box-shadow: rgba(134, 134, 108, 0.35) 0px 5px 15px;
+    text-align: center;
+    color: #ffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 1.75rem;
+}
+h2{
+    font-size: 1.25rem;
+}
+
+ul{
+    list-style: "*";
+    color: rgba(255, 255, 0, 0.349);
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: normal;
+    color: rgba(255, 255, 0, 0.349);
+    margin: 0px;
+}
+
+h1,h2{
+    margin: 0px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+
+main{
+    grid-column: 2/3;
+    color: white;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    margin-top: 7rem;
+}
+h3{
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0px;
+    color: white;
+}
+.versus{
+    text-align: center;
+    margin: 0px;
+    grid-column: 1/-1;
+    margin-top: 5rem;
+}
+.accion{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: #50503d;
+    border-radius: 20px;
+    box-shadow: rgba(247, 252, 0, 0.35) 0px 5px 15px;
+}
+
+.accion h4{
+    font-size: 5rem;
+    margin: 0px;
+}
+.accion img, .imagenes img{
+    object-fit: contain;
+}
+.accion img{
+    width: 12%;
+    padding: 2rem;
+}
+
+.imagenes{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.imagenes img{
+    width: 15%;
+    box-shadow: rgba(134, 134, 108, 0.35) 0px 5px 15px;
+}
+.accion>.vs{
+    width: 5%;
+    
+}
+.imagenes img{
+    padding: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(80, 80, 61);
+}
+
+.imagenes img:hover{
+    box-shadow: rgba(247, 252, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(102, 102, 78);
+    transition: 0.5s;
+}
+
+.eleccion{
+    text-align: left;
+    grid-column: 1/3;
+}
+
+.seleccionado{
+    border: 2px solid rgba(255, 255, 0, 0.767);
+}
+
+.jugabilidad{
+    grid-column: 3/4;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.jugabilidad>div{
+    width: 90%;
+}
+button{
+    font-family: inherit;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(151, 151, 0);
+    color: rgb(56, 56, 42);
+    border:0px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button{
+    cursor:auto;
+    width: 100%;
+} 
+
+button.jugar.enabled:hover, button.nuevo.enabled:hover{
+    background-color: rgb(255, 255, 0);
+    transition: 0.5s;
+    cursor: pointer;
+} 
+
+.ganador,.perdedor,.empate{
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.699);
+    backdrop-filter: blur(1px);
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ganador h2,.perdedor h2,.empate h2{
+    font-size: 10rem;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+}
+.ganador svg,.perdedor svg,.empate svg{
+    width: 5%;
+    height: auto;
+    filter: invert(90%);
+}
+.ganador{
+    color: rgb(1, 194, 1);
+}
+.perdedor{
+    color: rgb(243, 61, 61);
+}
+.empate{
+    color: yellow;
+}
+
+.cerrar{
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1500px) {
+    .imagenes{
+        width: 85%;
+    }
+
+    .ganador, .perdedor, .empate {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    header h1, header h2{
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+
+    .eleccion{
+        grid-column: 1/-1;
+        margin-bottom: 2rem;
+    }
+    .imagenes{
+        width: 100%;   
+    }
+
+    .jugabilidad{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        margin: 0px;
+    }
+
+    .jugabilidad>div{
+        width: 100%;
+        text-align: center;
+    }
+
+    .jugabilidad>div button{
+        width: 40%;
+        margin-top: 0px;
+    }
+
+    .versus{
+        margin-top: 2rem;
+    }
+
+    .ganador h2, .perdedor h2, .empate h2{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body{
+        grid-template-columns: 1fr 20fr 1fr;
+    }
+    header{
+        text-align: center;
+    }
+
+    header h1, header h2{
+        font-size: 1rem;
+        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+        width: 100%;
+    }
+
+    .imagenes img{
+        padding: 1.4rem;
+    }
+
+    .accion h4{
+        font-size: 2rem;
+    }
+
+    .accion img{
+        width: 29%;
+        padding: 1.25rem;
+    }
+
+    .ganador, .perdedor, .empate {
+        width: 85%;
+    }
+
+    .ganador h2, .perdedor h2, .empate h2{
+        font-size: 5rem;
+    }
+}
